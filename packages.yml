@@ -39,3 +39,5 @@ cask:
   - thunderbird
   - virtualbox
   - docker-toolbox
+  - iterm2
+  - slack

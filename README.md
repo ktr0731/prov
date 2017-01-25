@@ -1,5 +1,7 @@
-User Provisioning
+Provisioning scripts for macOS
 ====
 
-## About
-Provisioning scripts for user application, dotfiles, etc.
+## Usage
+``` sh
+$ itamae local default.rb
+```
