@@ -31,6 +31,9 @@ brew:
   - docker
   - docker-compose
   - docker-machine
+  - direnv
+  - ImageMagick
+  - sbt
 cask:
   - google-chrome
   - firefox
@@ -41,3 +44,4 @@ cask:
   - docker-toolbox
   - iterm2
   - slack
+  - xquartz
