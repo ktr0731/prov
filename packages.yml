@@ -34,6 +34,8 @@ brew:
   - direnv
   - ImageMagick
   - sbt
+  - git-extras
+
 cask:
   - google-chrome
   - firefox
