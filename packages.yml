@@ -43,6 +43,8 @@ cask:
   - keepassx
   - thunderbird
   - virtualbox
+  - vagrant
+  - vagrant-manager
   - docker-toolbox
   - iterm2
   - slack
