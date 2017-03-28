@@ -1,4 +1,5 @@
 brew:
+  - caskroom/cask/brew-cask
   - go
   - node
   - yarn
@@ -48,4 +49,8 @@ cask:
   - docker-toolbox
   - iterm2
   - slack
+  - telegram
   - xquartz
+  - inkscape
+  - toggldesktop
+  - dash
