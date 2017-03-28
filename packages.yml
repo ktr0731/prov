@@ -5,7 +5,7 @@ brew:
   - yarn
   - ruby
   - python3
-  - neovim
+  - neovim/neovim/neovim
   - editorconfig
   - redis
   - mongodb
@@ -54,3 +54,4 @@ cask:
   - inkscape
   - toggldesktop
   - dash
+  - 1password
