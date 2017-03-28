@@ -1,10 +1,11 @@
 require "yaml"
 
-BREW_INSTALL = "/usr/bin/ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+BREW_INSTALL = 'yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
 conf = YAML.load_file("./packages.yml")
 
-execute BREW_INSTALL do
+execute "Install Homebrew" do
+  command BREW_INSTALL
   not_if "which brew > /dev/null"
 end
 
