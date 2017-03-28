@@ -38,6 +38,7 @@ brew:
   - git-extras
 
 cask:
+  - java
   - google-chrome
   - firefox
   - gimp
