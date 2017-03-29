@@ -26,6 +26,7 @@ brew:
   - noti
   - tree
   - zsh
+  - fish
   - jq
   - fzf
   - shellcheck

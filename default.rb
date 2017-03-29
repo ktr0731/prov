@@ -14,6 +14,11 @@ conf["cask"].each do |pkg|
   execute "brew cask install #{pkg}"
 end
 
+execute "Install dotfiles" do
+  command "git clone https://github.com/lycoris0731/dotfiles && cd ~/dotfiles && make all"
+  not_if "test -d ~/dotfiles"
+end
+
 # TODO: Java <- sbt の依存関係を解消したい
 conf["brew"].each do |pkg|
   package pkg
