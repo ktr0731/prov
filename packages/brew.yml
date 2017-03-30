@@ -48,6 +48,7 @@ cask:
   - virtualbox
   - vagrant
   - vagrant-manager
+  - docker
   - docker-toolbox
   - iterm2
   - slack

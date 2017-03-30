@@ -2,7 +2,7 @@ require "yaml"
 
 BREW_INSTALL = 'yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
-conf = YAML.load_file("./packages.yml")
+brew = YAML.load_file("./packages/brew.yml")
 
 execute "Install Homebrew" do
   command BREW_INSTALL
@@ -10,7 +10,7 @@ execute "Install Homebrew" do
 end
 
 ENV["HOMEBREW_CASK_OPTS"] = "--appdir=/Applications"
-conf["cask"].each do |pkg|
+brew["cask"].each do |pkg|
   execute "brew cask install #{pkg}"
 end
 
@@ -19,7 +19,18 @@ execute "Install dotfiles" do
   not_if "test -d ~/dotfiles"
 end
 
+execute "Install GHQ" do
+  command "go get github.com/motemen/ghq"
+  not_if "test -z $GOPATH/bin/ghq"
+end
+
+# TODO: GHQパッケージのインストール
 # TODO: Java <- sbt の依存関係を解消したい
-conf["brew"].each do |pkg|
+brew["brew"].each do |pkg|
   package pkg
+end
+
+execute "Install pip3 packages" do
+  command "pip3 install --require ./packages/pip3.txt"
+  # TODO: not_if
 end
