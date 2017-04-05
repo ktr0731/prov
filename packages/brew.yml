@@ -37,6 +37,7 @@ brew:
   - ImageMagick
   - sbt
   - git-extras
+  - kubectl
 
 cask:
   - java
