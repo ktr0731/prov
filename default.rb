@@ -24,13 +24,15 @@ execute "Install GHQ" do
   not_if "test -z $GOPATH/bin/ghq"
 end
 
-# TODO: GHQパッケージのインストール
+execute "Install GHQ packages" do
+  command "ghq import < ./packages/ghq.txt"
+end
+
 # TODO: Java <- sbt の依存関係を解消したい
 brew["brew"].each do |pkg|
-  package pkg
+  execute "brew install #{pkg}"
 end
 
 execute "Install pip3 packages" do
   command "pip3 install --require ./packages/pip3.txt"
-  # TODO: not_if
 end
