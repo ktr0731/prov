@@ -38,6 +38,7 @@ brew:
   - sbt
   - git-extras
   - kubectl
+  - ripgrep
 
 cask:
   - java
