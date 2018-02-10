@@ -41,22 +41,27 @@ brew:
   - ripgrep
 
 cask:
-  - java
   - google-chrome
   - firefox
   - gimp
-  - keepassx
-  - thunderbird
   - virtualbox
-  - vagrant
-  - vagrant-manager
   - docker
   - docker-toolbox
   - iterm2
   - slack
-  - telegram
   - xquartz
-  - inkscape
   - toggldesktop
   - dash
   - 1password
+  - clip-studio-paint
+  - intellij-idea
+  - goland
+  - pycharm
+  - webstorm
+  - rocket
+  - visual-studio-code
+  - shiftit
+  - astro
+  - kindle
+  - audirvana-plus
+  - atom
