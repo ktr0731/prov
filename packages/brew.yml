@@ -1,67 +1,109 @@
 brew:
-  - caskroom/cask/brew-cask
-  - go
-  - node
-  - yarn
-  - ruby
-  - python3
-  - neovim/neovim/neovim
-  - editorconfig
-  - redis
-  - mongodb
-  - sqlite
-  - mysql
-  - tig
-  - gibo
-  - git-flow
-  - git-lfs
-  - m-cli
-  - tmux
-  - reattach-to-user-namespace
-  - coreutils
-  - gnutls
-  - hub
-  - nmap
-  - fzy
-  - noti
-  - tree
-  - zsh
-  - fish
-  - jq
-  - fzf
-  - shellcheck
-  - docker
-  - docker-compose
-  - docker-machine
-  - direnv
-  - ImageMagick
-  - sbt
-  - git-extras
-  - kubectl
-  - ripgrep
+- ImageMagick
+- awscli
+- bash
+- binutils
+- binwalk
+- caskroom/cask/brew-cask
+- colordiff
+- coreutils
+- curl
+- direnv
+- docker
+- docker-compose
+- docker-machine
+- editorconfig
+- ethereum/ethereum/ethereum
+- exa
+- fzf
+- fzy
+- gawk
+- gcc
+- gcsfuse
+- gdb
+- gdbm
+- geoip
+- gibo
+- git
+- git-extras
+- git-flow
+- git-lfs
+- glide
+- gnu-sed
+- gnutls
+- go
+- highlight
+- httpie
+- hub
+- iftop
+- jq
+- ktr0731/evans/evans
+- kubectl
+- kubernetes-cli
+- m-cli
+- mackerelio/mackerel-agent/mackerel-agent
+- mongodb
+- moreutils
+- mycli
+- mysql
+- neovim/neovim/neovim
+- nginx
+- nkf
+- nmap
+- node
+- node-build
+- nodenv
+- noti
+- pgcli
+- pipenv
+- postgresql
+- pstree
+- pyenv
+- pyenv-pip-rehash
+- python
+- python3
+- rbenv
+- reattach-to-user-namespace
+- redis
+- ripgrep
+- ruby
+- ruby-build
+- rust
+- rustup-init
+- shellcheck
+- sqlite
+- sshrc
+- the_silver_searcher
+- tig
+- tmux
+- tree
+- vim
+- wget
+- yarn
+- zsh
 
 cask:
-  - google-chrome
-  - firefox
-  - gimp
-  - virtualbox
-  - docker
-  - docker-toolbox
-  - iterm2
-  - slack
-  - xquartz
-  - toggldesktop
-  - dash
-  - 1password
-  - clip-studio-paint
-  - intellij-idea
-  - goland
-  - pycharm
-  - webstorm
-  - rocket
-  - visual-studio-code
-  - shiftit
-  - astro
-  - kindle
-  - audirvana-plus
-  - atom
+- google-chrome
+- firefox
+- gimp
+- virtualbox
+- docker
+- docker-toolbox
+- iterm2
+- slack
+- xquartz
+- toggldesktop
+- dash
+- 1password
+- clip-studio-paint
+- intellij-idea
+- goland
+- pycharm
+- webstorm
+- rocket
+- visual-studio-code
+- shiftit
+- astro
+- kindle
+- audirvana-plus
+- atom
