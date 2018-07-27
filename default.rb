@@ -23,11 +23,17 @@ execute "Install GHQ packages" do
   command "ghq import < ./packages/ghq.txt"
 end
 
-# TODO: Java <- sbt の依存関係を解消したい
 brew["brew"].each do |pkg|
   execute "brew install #{pkg}"
 end
 
 execute "Install pip3 packages" do
   command "pip3 install --require ./packages/pip3.txt"
+end
+
+execute "Install protoc" do
+  command "curl -sLo /tmp/protoc.zip https://github.com/google/protobuf/releases/download/v3.6.0/protoc-3.6.0-osx-x86_64.zip && unzip /tmp/protoc.zip -d /tmp/protoc &&
+  mv /tmp/protoc/bin/protoc /usr/local/bin/protoc &&
+  rm -rf /tmp/proto /tmp/protoc.zip"
+  not_if "which protoc > /dev/null"
 end
