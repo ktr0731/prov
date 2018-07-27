@@ -9,3 +9,7 @@ brew:
 .PHONY: cask
 cask:
 	brew cask list -1 --full-name | xargs ./scripts/brew -cask packages/brew.yml
+
+.PHONY: run
+run:
+	itamae local default.rb
