@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+verbose='-vv'
+
+set -e
+
+apt update -y
+apt install -y ansible
+
+ansible-playbook "$verbose" -i hosts site.yml

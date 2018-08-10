@@ -1,0 +1,102 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: install Homebrew packages
+      homebrew:
+        name: "{{item}}"
+      with_items:
+        - less
+        - vim
+        - dstat
+        - binutils
+        - binwalk
+        - caskroom/cask/brew-cask
+        - colordiff
+        - coreutils
+        - curl
+        - direnv
+        - docker
+        - editorconfig
+        - ffmpeg
+        - fzf
+        - gawk
+        - gcc
+        - gdb
+        - geoip
+        - gibo
+        - git
+        - git-extras
+        - git-flow
+        - gnu-sed
+        - gnutls
+        - go
+        - highlight
+        - htop
+        - httpie
+        - hub
+        - imagemagick
+        - jq
+        - ktr0731/evans/evans
+        - m-cli
+        - moreutils
+        - mycli
+        - mysql
+        - neovim/neovim/neovim
+        - nkf
+        - nmap
+        - node
+        - node-build
+        - nodenv
+        - noti
+        - openssl
+        - pgcli
+        - pipenv
+        - postgresql
+        - pstree
+        - pyenv
+        - python
+        - python3
+        - rbenv
+        - reattach-to-user-namespace
+        - redis
+        - ripgrep
+        - ruby
+        - ruby-build
+        - shellcheck
+        - sshrc
+        - the_silver_searcher
+        - tig
+        - tmux
+        - tree
+        - vim
+        - wget
+        - yarn
+        - zsh
+
+    - name: install Homebrew Cask packages
+      homebrew_cask:
+        name: "{{item}}"
+      with_items:
+          - google-chrome
+          - firefox
+          - gimp
+          - docker
+          - iterm2
+          - slack
+          - xquartz
+          - 1password
+          - intellij-idea
+          - goland
+          - pycharm
+          - webstorm
+          - rocket
+          - visual-studio-code
+          - shiftit
+          - astro
+          - kindle
+          - audirvana-plus
+          - atom
+          - google-drive-file-stream
