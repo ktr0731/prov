@@ -4,7 +4,9 @@ verbose='-vv'
 
 set -e
 
-apt update -y
-apt install -y ansible
+# install Homebrew
+yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-ansible-playbook "$verbose" -i hosts site.yml
+brew install ansible
+
+ansible-playbook "$verbose" site.yml

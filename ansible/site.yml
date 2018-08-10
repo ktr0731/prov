@@ -2,7 +2,6 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: no
-  become: yes
   tasks:
     - name: install Homebrew packages
       homebrew:
@@ -10,10 +9,8 @@
       with_items:
         - less
         - vim
-        - dstat
         - binutils
         - binwalk
-        - caskroom/cask/brew-cask
         - colordiff
         - coreutils
         - curl
@@ -100,3 +97,11 @@
           - audirvana-plus
           - atom
           - google-drive-file-stream
+
+    - name: check zplug
+      shell: type zplug
+      register: has_zplug
+
+    - name: install zplug
+      shell: curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+      when: has_zplug == false
