@@ -72,6 +72,7 @@
         - wget
         - yarn
         - zsh
+        - dep
 
     - name: install Homebrew Cask packages
       homebrew_cask:
