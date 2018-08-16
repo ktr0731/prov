@@ -98,6 +98,7 @@
           - audirvana-plus
           - atom
           - google-drive-file-stream
+          - google-cloud-sdk
 
     - name: check zplug
       shell: type zplug
