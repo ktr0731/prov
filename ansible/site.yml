@@ -73,6 +73,7 @@
         - yarn
         - zsh
         - dep
+        - kubectl
 
     - name: install Homebrew Cask packages
       homebrew_cask:
