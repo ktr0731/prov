@@ -1,0 +1,49 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: install apt packages
+      apt:
+        name: "{{item}}"
+        update_cache: yes
+      with_items:
+        - curl
+        - dstat
+        - git
+        - sysstat
+        - htop
+        - percona-toolkit
+        - redis-server
+        - tig
+        - tcpdump
+        - tmux
+        - vim
+
+    - shell: which alp
+      register: has_alp
+      ignore_errors: yes
+
+    - name: install alp
+      shell: |
+        curl -Lo /tmp/alp.zip https://github.com/tkuchiki/alp/releases/download/v0.3.1/alp_linux_amd64.zip
+        unzip -d /tmp /tmp/alp.zip
+        mv /tmp/alp /usr/local/bin/alp
+      when: has_alp.rc == 1
+
+    - shell: which log2ltsv
+      register: has_log2ltsv
+      ignore_errors: yes
+
+    - name: install log2ltsv
+      shell: |
+        curl -Lo /tmp/log2ltsv.zip https://github.com/tkuchiki/log2ltsv/releases/download/v0.1.1/log2ltsv_linux_amd64.zip
+        unzip -d /tmp /tmp/log2ltsv.zip
+        mv /tmp/log2ltsv /usr/local/bin/log2ltsv
+      when: has_log2ltsv.rc == 1
+
+    - name: install pt-query-digest
+      shell: |
+        curl -LO percona.com/get/pt-query-digest
+        chmod +x pt-query-digest
+        mv pt-query-digest /usr/local/bin
