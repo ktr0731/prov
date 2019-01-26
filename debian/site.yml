@@ -12,6 +12,7 @@
         - dstat
         - git
         - sysstat
+        - strace
         - htop
         - percona-toolkit
         - redis-server

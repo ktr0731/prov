@@ -1,7 +1,13 @@
-Provisioning scripts for macOS
+Provisioning scripts for (macOS|Debian)
 ====
 
 ## Usage
+macOS
 ``` sh
-$ itamae local default.rb
+$ ./macos/entrypoint
+```
+
+Debian
+``` sh
+$ ./debian/entrypoint
 ```

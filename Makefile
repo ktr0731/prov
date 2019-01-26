@@ -12,4 +12,4 @@ cask:
 
 .PHONY: run
 run:
-	itamae local default.rb
+	./macos/entrypoint
