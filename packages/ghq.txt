@@ -1,9 +1,0 @@
-golang/dep
-jstemmer/gotags
-kisielk/gotool
-ktr0731/itunes-cli
-ktr0731/dotfiles
-neomake/neomake
-neovim/python-client
-nsf/gocode
-pocke/www
