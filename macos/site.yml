@@ -73,6 +73,7 @@
         - zsh
         - dep
         - kubectl
+        - trash
 
     - name: install Homebrew Cask packages
       homebrew_cask:
