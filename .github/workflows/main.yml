@@ -1,0 +1,12 @@
+name: main
+on: [push, pull_request]
+jobs:
+  test:
+    name: teset
+    runs-on: 'macOS-10.14'
+    - name: Check out code
+      uses: actions/checkout@v1
+
+    - name: Run
+      run: |
+        ./macos/entrypoint
