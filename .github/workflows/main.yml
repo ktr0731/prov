@@ -1,0 +1,13 @@
+name: main
+on: [push, pull_request]
+jobs:
+  test:
+    name: teset
+    runs-on: macos-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v1
+
+    - name: Run
+      run: |
+        ./macos/entrypoint
