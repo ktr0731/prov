@@ -1,4 +1,5 @@
 Provisioning scripts for (macOS|Debian)
+[![GitHub Actions](https://github.com/ktr0731/prov/workflows/main/badge.svg)](https://github.com/ktr0731/prov/actions)  
 ====
 
 ## Usage
