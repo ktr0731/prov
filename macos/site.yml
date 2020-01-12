@@ -38,31 +38,21 @@
         - jq
         - ktr0731/evans/evans
         - m-cli
-        - mycli
-        - mysql
         - neovim/neovim/neovim
         - nkf
         - nmap
         - node
-        - node-build
-        - nodenv
         - noti
         - openssl
-        - pgcli
-        - pipenv
-        - postgresql
         - pstree
-        - pyenv
         - python
         - python3
-        - rbenv
         - reattach-to-user-namespace
         - redis
         - ripgrep
         - ruby
         - ruby-build
         - shellcheck
-        - sshrc
         - the_silver_searcher
         - tig
         - tmux
@@ -70,7 +60,6 @@
         - wget
         - yarn
         - zsh
-        - dep
         - kubectl
         - trash
 
@@ -80,15 +69,12 @@
       with_items:
           - google-chrome
           - firefox
-          - gimp
           - docker
           - iterm2
           - slack
           - xquartz
           - 1password
-          - intellij-idea
           - goland
-          - pycharm
           - webstorm
           - rocket
           - visual-studio-code
@@ -101,6 +87,7 @@
     - name: check zplug
       shell: type zplug
       register: has_zplug
+      failed_when: false
 
     - name: install zplug
       shell: curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
