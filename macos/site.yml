@@ -62,6 +62,7 @@
         - zsh
         - kubectl
         - trash
+        - gcsfuse
 
     - name: install Homebrew Cask packages
       homebrew_cask:
@@ -83,6 +84,7 @@
           - atom
           - google-drive-file-stream
           - google-cloud-sdk
+          - osxfuse
 
     - name: check zplug
       shell: type zplug
