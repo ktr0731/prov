@@ -10,48 +10,32 @@
         - less
         - vim
         - binutils
-        - binwalk
         - colordiff
         - coreutils
         - curl
         - direnv
-        - docker
-        - editorconfig
         - ffmpeg
         - fzf
         - gawk
-        - gcc
-        - gdb
-        - geoip
         - gibo
         - git
-        - git-extras
-        - git-flow
         - gnu-sed
         - gnutls
-        - go
         - highlight
         - htop
-        - httpie
-        - hub
+        - gh
         - imagemagick
         - jq
         - ktr0731/evans/evans
         - m-cli
         - neovim/neovim/neovim
         - nkf
-        - nmap
         - node
-        - noti
         - openssl
-        - pstree
         - python
         - python3
         - reattach-to-user-namespace
-        - redis
         - ripgrep
-        - ruby
-        - ruby-build
         - shellcheck
         - the_silver_searcher
         - tig
@@ -62,29 +46,22 @@
         - zsh
         - kubectl
         - trash
-        - gcsfuse
 
     - name: install Homebrew Cask packages
       homebrew_cask:
         name: "{{item}}"
       with_items:
           - google-chrome
-          - firefox
-          - docker
+          - microsoft-edge
           - iterm2
           - slack
-          - xquartz
           - 1password
-          - goland
-          - webstorm
           - rocket
           - visual-studio-code
-          - shiftit
           - kindle
-          - atom
           - google-drive-file-stream
           - google-cloud-sdk
-          - osxfuse
+          - keybase
 
     - name: check zplug
       shell: type zplug
