@@ -20,6 +20,7 @@
         - gibo
         - git
         - gnu-sed
+        - gnupg
         - gnutls
         - highlight
         - htop
@@ -62,6 +63,7 @@
           - google-drive-file-stream
           - google-cloud-sdk
           - keybase
+          - pinentry-mac
 
     - name: check zplug
       shell: type zplug
